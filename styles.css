@@ -189,9 +189,19 @@ header .welcome-text{
     text-transform: uppercase; 
 }
 
+.container{
+    text-align: center;
+    padding: 10px 20px;
+}
+
 .photo{
-    width: 25vw;
+    width: 80%;
     margin-right: 10vw;
+    background-color: white;
+}
+
+.photo:hover{
+    box-shadow: 0 0 3px 2px grey;
 }
 
 .bullet{
@@ -204,6 +214,7 @@ header .welcome-text{
     left: 2rem;
     top: .3rem;
 }
+
 /*
 .vertical-line{
     margin-top: 10vh;
