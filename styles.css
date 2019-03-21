@@ -43,7 +43,9 @@ a{
     top: 0;
     left: 0;
     background-position: center;
+    /*
     background-size: 100%;
+    */
     position: absolute;
     z-index: -1;
     transform: translateZ(-1px) scale(2);
@@ -51,11 +53,13 @@ a{
 
 .filler-image::before{
     background-image: url(images/ucsd-filler.jpg);
+    background-size: 100%;
 }
 
 /* HEADER RULES */
 .welcome::before{
-    background-image: url(images/header-img.jpg);
+    background-image: url(images/header-img.jpg);    
+    background-size: 100%;
 }
 
 .nav-bar{
@@ -66,7 +70,6 @@ a{
 
 .nav-options{
     display:inline-flex;
-    flex-wrap: wrap;
     margin-right:20px;
     font-size: 15px;
     border: 3px;
@@ -77,7 +80,7 @@ a{
 header .welcome-text{
    margin: 0 auto;
    padding-top: 15vh;
-   width: 50%;
+   width: 90%;
    text-align: center;
    font-size: 26px;
    text-transform: uppercase;
@@ -104,33 +107,15 @@ header .welcome-text{
     opacity: 0.3;
 }
 
-.about-me-titles{
+.about-me-section{
     display: flex;
-    justify-content: center;
 }
 
 .about-me-photography{
-    flex: 0 0 50%;
     margin-right: 20px;
 }
 
 .about-me-personal{
-    flex: 1;
-    margin-left: 20px;
-}
-
-.about-me-content{
-    display: flex;
-    justify-content: center;
-}
-
-.content-photography{
-    flex: 0 0 50%;
-    margin-right: 20px;
-}
-
-.content-personal{
-    flex: 1;
     margin-left: 20px;
 }
 
@@ -157,6 +142,42 @@ header .welcome-text{
 
 .photos-block{
     margin-top: 5vh;
+}
+
+/* RESPONSIVE FOR PHOTO GALLERY PREVIEW */
+@media only screen and (max-width: 750px){
+    .photos-timeline{
+        flex-wrap: wrap;
+    }
+
+    .welcome::before{
+        background-size: cover;
+    }
+
+    .filler-image::before{
+        background-size: cover;
+    }
+
+    header .welcome-text{
+        padding-top: 10vh;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 430px){
+    .nav-options{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2vh;
+    }
+
+    header .welcome-text{
+        padding-top:5vh;
+    }
+
+    .about-me-section{
+        flex-direction: column;
+    }
 }
 
 .photos-timeline-left{
