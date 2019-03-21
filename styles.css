@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700');
+html{
+    overflow: hidden;
+}
+
+body{
+    margin: 0;
+    font-family: 'Lora', sans-serif;
+    color: white;
+    height: 100vh;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.regular-wrapper{
+    width: 100vw;
+    padding-top: 20vh;
+    padding-bottom: 40vh;
+    z-index: 2;
+    position: relative;
+}
+
+.parallax-wrapper{
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20vh;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+}
+
+.parallax-wrapper::before{
+    content:"";
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-position: center;
+    background-size: 100%;
+    position: absolute;
+    z-index: -1;
+    transform: translateZ(-1px) scale(2);
+}
+
+.filler-image::before{
+    background-image: url(images/ucsd-filler.jpg);
+}
+
+/* HEADER RULES */
+.welcome::before{
+    background-image: url(images/header-img.jpg);
+}
+
+.nav-bar{
+    list-style-type: none;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.nav-options{
+    display:inline-flex;
+    flex-wrap: wrap;
+    margin-right:20px;
+    font-size: 15px;
+    border: 3px;
+    border-style: solid;
+    padding: 10px 1em 10px 1em;
+}
+
+header .welcome-text{
+   margin: 0 auto;
+   padding-top: 15vh;
+   width: 50%;
+   text-align: center;
+   font-size: 26px;
+   text-transform: uppercase;
+}
+
+/* ABOUT ME SECTION RULES */
+.intro-wrapper{
+    background-image: url(images/whitebg.jpg);
+}
+
+.intro-content{
+    margin: 0 auto;
+    padding: 50px;
+    width: 70%;
+    color: black;
+    text-align: center;
+}
+
+.first-intro{
+    font-size: 30px;
+}
+
+.separator{
+    opacity: 0.3;
+}
+
+.about-me-titles{
+    display: flex;
+    justify-content: center;
+}
+
+.about-me-photography{
+    flex: 0 0 50%;
+    margin-right: 20px;
+}
+
+.about-me-personal{
+    flex: 1;
+    margin-left: 20px;
+}
+
+.about-me-content{
+    display: flex;
+    justify-content: center;
+}
+
+.content-photography{
+    flex: 0 0 50%;
+    margin-right: 20px;
+}
+
+.content-personal{
+    flex: 1;
+    margin-left: 20px;
+}
+
+/* PHOTOS PREVIEW SECTION RULES */
+.photos-preview-wrapper{
+    background-image: url(images/whitebg.jpg);
+}
+
+.photo-content{
+    margin: 0 auto;
+    padding: 50px;
+    width: 70%;
+    color: black;
+}
+
+.photo-content-title{
+    font-size: 30px;
+    text-align: center;
+}
+
+.photos-timeline{
+    display: flex;
+}
+
+.photos-block{
+    margin-top: 5vh;
+}
+
+.photos-timeline-left{
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+/*
+.photos-timeline-left::before{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: grey;
+    position: absolute;
+    left: 2rem;
+    top: 0;
+}
+*/
+.photos-timeline-right{
+    display:flex;
+    flex-direction: column;
+    color: black;
+    float: right;
+}
+
+.captions{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    margin-bottom: 1vh;   
+    text-transform: uppercase; 
+}
+
+.photo{
+    width: 25vw;
+    margin-right: 10vw;
+}
+
+.bullet{
+    background: black;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    margin-left: -0.75rem;
+    position: absolute;
+    left: 2rem;
+    top: .3rem;
+}
+/*
+.vertical-line{
+    margin-top: 10vh;
+    border-left: 2px solid;
+    opacity: 0.3;
+    height: 600px;
+}
+*/
+
+/* FOOTER RULES */
+.contact-footer{
+    height: 80vh;
+    background-color: black;
+}
