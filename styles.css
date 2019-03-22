@@ -158,9 +158,21 @@ header .welcome-text{
         background-size: cover;
     }
 
+    .photos-preview-wrapper{
+        background-size: cover;
+    }
+
+    .intro-wrapper{
+        background-size: cover;
+    }
+
     header .welcome-text{
         padding-top: 10vh;
         font-size: 20px;
+    }
+
+    input[type=text]{
+        width: 100px;
     }
 }
 
@@ -247,6 +259,61 @@ header .welcome-text{
 
 /* FOOTER RULES */
 .contact-footer{
-    height: 80vh;
+    height: 100vh;
     background-color: black;
+    text-align: center;
+}
+
+.contact-me-title{
+    font-size: 30px;
+}
+
+input[type=text]{
+    text-align: left;
+    width: 60vw;
+    background-color: black;
+    border-bottom: 2px solid white;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    color: white;
+    padding: 5px 0 7px 5px;
+    font-family: 'Lora', sans-serif;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+input::placeholder{
+    color: grey;
+    font-size: 18px;
+}
+
+textarea{
+    width: 60vw;
+    font-size: 18px;
+    font-family: 'Lora', sans-serif;
+    background-color: black;
+    color: grey;
+    border-bottom: 2px solid white;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    height: 40vh;
+    margin-left: 0px;
+    resize: none;
+}
+
+.submit-button-wrapper{
+    padding: 10vh;
+}
+
+.submit-button{
+    height: 10vh;
+    width: 60vw;
+    font-family: 'Lora', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: white;
+    border: 0;
+    text-transform: uppercase;
 }

@@ -39,24 +39,6 @@
                     <p>I am undergrad at UCSD majoring in Data Science and minoring in Business</p>
                 </div>
             </div>
-            <!--
-            <div class="about-me-titles">
-                <div class="about-me-photography">
-                    <h4>Photography</h4>
-                </div>
-                <div class="about-me-personal">
-                    <h4>Personal</h4>
-                </div>
-            </div>
-            <div class="about-me-content">
-                <div class="content-photography">
-                    <p>I have this camera. I take pics of this stuff. I'm just trying to fill blank spaces yeah boi</p>
-                </div>
-                <div class="content-personal">
-                    <p>I am undergrad at UCSD majoring in Data Science and minoring in Business</p>
-                </div>
-            </div>
-        -->
         </div>
     </section>
     <!-- end about me -->
@@ -108,17 +90,20 @@
     </section>
     <!-- end photo timeline section -->
     <footer class="contact-footer regular-wrapper">
-        <p>If you have any requests, contact me here!</p>
+        <div class="contact-me-title">
+            <h3>Contact me here!</h3>
+        </div>
         <form class="contact-form">
+            <!--
             Name<br>
-            <input type="text" name="name"><br>
-            Email<br>
-            <input type="text" name="email"><br>
-            Subject<br>
-            <input type="text" name="text-subject"><br>
-            Message<br>
-            <input type="text" name="text-message"><br>
-            <input type="submit" value="Send">
+            -->
+            <input type="text" name="name" placeholder="Name"><br>
+            <input type="text" name="email" placeholder="Email"><br>
+            <input type="text" name="text-subject" placeholder="Subject"><br>
+            <textarea name="text-message" placeholder="Message" cols="1" rows="1"></textarea>
+            <div class="submit-button-wrapper">
+                <button class="submit-button">Send</button>
+            </div>
         </form>
     </footer>
 </body>
