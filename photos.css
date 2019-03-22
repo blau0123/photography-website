@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700');
+html{
+    overflow: hidden;
+}
+
+body{
+    margin: 0;
+    font-family: 'Lora', sans-serif;
+    color: white;
+    height: 100vh;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.regular-wrapper{
+    width: 100vw;
+    padding-top: 20vh;
+    padding-bottom: 40vh;
+    z-index: 2;
+    position: relative;
+}
+
+.parallax-wrapper{
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20vh;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+}
+
+.parallax-wrapper::before{
+    content:"";
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-position: center;
+    /*
+    background-size: 100%;
+    */
+    position: absolute;
+    z-index: -1;
+    transform: translateZ(-1px) scale(2);
+}
+
+/* HEADER RULES */
+.welcome::before{
+    background-image: url(images/header-img.jpg);    
+    background-size: 100%;
+}
+
+.nav-bar{
+    color: white;
+    list-style-type: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+
+.nav-options{
+    display: inline-flex;
+    padding-right: 5vw;
+    font-size: 15px;
+}
+
+header .welcome-text{
+    margin: 0 auto;
+    padding-top: 15vh;
+    width: 90%;
+    text-align: center;
+    font-size: 26px;
+    text-transform: uppercase;
+ }
+
+ /* ALBUMS RULES */
+ .album-list-wrapper{
+     /*
+    background-image: url(images/whitebg.jpg);
+    */
+    background-color: white;
+ }
+
+ #album-content{
+    margin: 0 auto;
+    padding: 10px;
+    width: 90%;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo{
+    width: 25%;
+    padding: 20px;
+    margin: 25px;
+}
+
+.album-block{
+    box-sizing: border-box;
+}
