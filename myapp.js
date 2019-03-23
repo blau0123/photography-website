@@ -1,36 +1,16 @@
-function createAllPhotos(evt){
-    var folder = "photographs/"
-    // appends all files in photographs folder to photos[]
-    $.ajax({
-        url : folder,
-        success: function(data){
-            $(data).find("a").attr("href", function(i, val){
-                // only looks at files that end with .jpe, .jpg., .png
-                if( val.match(/\.(jpe?g|png)$/) ){
-                    // create element and set source (current file)
-                    var newImg = document.createElement('img');
-                    newImg.src = val;
-                    newImg.className = "photo";
+var submit_btn = document.querySelector(".submit-button");
+var user_email = document.getElementById("email");
+var user_subject = document.getElementById("subject");
+var user_message = document.getElementById("message");
 
-                    // append each image to album-content div
-                    document.getElementById('album-content').appendChild(newImg);
-                }
-            })
-        }
-    });
+function submitMessage(){
 
-    setPhotoAttributes();
-}
-
-function setPhotoAttributes(){
-    var allPhotos = document.getElementsByClassName('photo');
-    for (var i = 0; i < allPhotos.length; i++){
-        allPhotos[i]
-    }
 }
 
 function main(){
-    createAllPhotos();
+    submit_btn.addEventListener('click', function(){
+        submitMessage();
+    })
 }
 
 main();
